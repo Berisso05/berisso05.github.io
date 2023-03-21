@@ -6,47 +6,38 @@
 
 
 body {
-        background-color: white;
+        background-image: url("../imagenes/fondo.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
         display: grid;
         grid-template-areas: 
-        "header header header"
-        "main   main   main"
-        "main   main   main"
-        "footer footer footer";
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 100px auto auto 200px;
-
+        "header header header "
+        "main main main "
+        "servicios servicios servicios"
+        "footer footer footer ";
+        grid-template-columns: auto;
 }
 
+
 header {
-        background-color: blueviolet;
-        position: fixed;
+        
         top: 0;
         width: 100%;
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        height: 100px;
         grid-area: header;
 }
 
-main {
-        grid-area: main;
-}
 
-header li {
-        padding: 0 20px;
-}
 
 header img {
         width: 90px;
+        padding-right: 10px;
 }
 
-nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-}
+
 
 header nav ul li a {
         text-decoration: none;
@@ -54,29 +45,31 @@ header nav ul li a {
         font-size: 20px;
 }
 
+.servicios {
+        grid-area: servicios;
+}
 
-#nn {
+.mainservicios {
+        align-items: center;
         text-align: center;
-        height: 50vh;
-        padding-top: 25vh;
-        background-color: white;
+        padding-top: 150px;
+        grid-area: main;
+        text-shadow: 2px 2px 15px blueviolet;
 
 }
 
-#nn .op {
+.op {
         font-size: 1.7rem;
-        margin: 15px;
         color: blueviolet;
 }
 
-#nn a {
+.mainservicios a {
         background-color: black;
         color: white;
         text-decoration: none;
 
+
 }
-
-
 
 
 .boton {
@@ -89,10 +82,12 @@ header nav ul li a {
         border-radius: 20px;
 }
 
-#nn p {
+.mainservicios p {
         margin: 40px;
         font-size: 1.5rem;
         color: blueviolet;
+        text-shadow: 2px 2px 15px blueviolet;
+
 }
 
 .buton {
@@ -113,48 +108,59 @@ header nav ul li a {
         border-radius: 20px;
         height: 200px;
         width: 300px;
-        padding-top: 60px;
+        padding-top: 20px;
         margin: 20px
 }
 
 .padre {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
 }
 
 .services {
         color: blueviolet;
         display: flex;
         justify-content: center;
+        text-shadow: 2px 2px 15px blueviolet;
+
 }
 
 footer {
-        text-decoration: none;
         background-color: blueviolet;
-        position: fixed;
-        height: 100px;
-        left: 0;
-        bottom: 0;
         width: 100%;
-        grid-area: foote;
+        grid-area: footer;
         display: flex;
-        flex-direction: column-reverse;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: space-evenly;
+        flex-direction: column;
 }
 
-footer ul li img {
-        width: 50px;
-        height: 50px;
+footer h3 {
+        display: flex;
+        justify-content: center;
+}
+
+.footercolumns {
+        display: flex;
+        justify-content: space-between;
         
 }
 
+footer div {
+        color: black;
+}
 
+.imgfooter img {
+        width: 50px;
+        height: 50px;
+
+}
+
+.footercolumns ul li {
+        list-style-type: none;
+}
 
 .parrafo-1 {
         text-align: center;
-        margin-top: 150px;
+        margin-top: 20px;
 }
 
 .parrafo-canana {
@@ -166,68 +172,62 @@ footer ul li img {
         text-align: center;
 }
 
-.imgTrabajos {
-        border: black;
-        padding: 300px;
-        height: 300px;
-        width: 350px;
-}
-
-.mainServicios {
-        color: blueviolet;
-        padding-top: 10px;
-        width: 300px;
-}
-
-.h2servicios {
-        padding-top: 150px;
-}
-
 .fieldsetServicios img {
         width: 500px;
-        margin-left: 250px;
+
 }
 
 .fieldsetServicios {
         color: blueviolet;
 }
 
-.fieldsetServicios h3 {
-        padding-left: 600px;
-}
 
 .imgTrabajos img {
         margin: 5px;
         width: 500px;
-        padding-top: 10px;
 }
 
-.nosotros p {
-        display: flex;
-        justify-content: center;
-        margin-top: 150px;
+
+.pr img {
+        width: 500px;
+        height: 500px;
+}
+
+.pr {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+        body {
+                background-color: white;
+                grid-template-areas: 
+                "header"
+                "main"
+                "servicios"
+                "footer";
+                grid-template-columns: auto;
+        }
+
+        .padre {
+                flex-direction: column;
+                align-content: center;
+                align-items: center;}
+
+                
 }
 
 .nosotros img {
-        display: flex;
-        justify-content: center;
-        margin-top: 150px;
         width: 350px;
-        height: 450px;
 }
 
-#pr {
+.navbar {
+        background-color: blueviolet;
+}
+
+.flex-servicios {
         display: flex;
         flex-direction: column;
-        align-items: center;
-}
 
-#pr img {
-        width: 500px;
-        height: 500px;
-        float: left;
-        padding: 10px;
-        margin-top: 100px;
 }
-
 

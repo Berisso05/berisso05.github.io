@@ -1,83 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrancoBerisso</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Franco Berisso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+  <body>
+    
     
     <header>
         <a href="#">
             <img src="../imagenes/logo.jpeg" alt="logito">
         </a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="../pages/quienessomos.html">¿QUIENES SOMOS?</a></li>
-                <li><a href="../pages/productos.html">PRODUCTOS</a></li>
-                <li><a href="../pages/nuestrostrabajos.html">NUESTROS TRABAJOS</a></li>
-                <li><a href="../pages/servicios.html">SERVICIOS</a>
-            </ul>
-    </header>   
-    <h2 class="h2servicios">Aqui puedes contactarnos para algunos de nuestros servicios</h2>
-<main class="mainServicios">
-    <section>
-        <form method="post">
-            <fieldset>
-                <legend>Datos de contacto</legend>
-                <label for="nombre">Apellido y Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <br>
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>Nuestros servicios:</legend>
-                <label for="servicios">Servicios:</label>
-                <select id="servicios" name="servicios">
-                    <option value="armadopc">armado de pc</option>
-                    <option value="servicepc">service pc</option>
-                    <option value="servicenotebook">service notebook</option>
-                    <option value="serviceconsola">service consolas</option>
-                    <option value="otros">Otro</option>
-                </select>
-                <br>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                <br>
-                <input type="submit" value="Enviar">
-            </fieldset>
-        </form>
-    </section>
-</main>
-    
-    <section class="fieldsetServicios">
-        <br>
-        <h3>Este es un antes y un despues de una pc que le hicimos service:</h3>
-            <img src="../imagenes/antes.jpg" alt="despues">
-            <img src="../imagenes/tp2.jpg" alt="despues">
-    </section>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">INICIO</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="../pages/quienessomos.html">¿QUIENES SOMOS?</a>
+                  <a class="nav-link" href="../pages/productos.html">PRODUCTOS</a>
+                  <a class="nav-link" href="../pages/nuestrostrabajos.html">NUESTROS TRABAJOS</a>
+                  <a class="nav-link" href="../pages/servicios.html">SERVICIOS</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+  <section class="flex-servicios">
+        <h2 class="h2servicios">Aqui puedes contactarnos para algunos de nuestros servicios</h2>
+    <main class="mainServicios">
+        <section class="dates">
+            <form method="post">
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <label for="nombre">Apellido y Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Nuestros servicios:</legend>
+                    <label for="servicios">Servicios:</label>
+                    <select id="servicios" name="servicios">
+                        <option value="armadopc">armado de pc</option>
+                        <option value="servicepc">service pc</option>
+                        <option value="servicenotebook">service notebook</option>
+                        <option value="serviceconsola">service consolas</option>
+                        <option value="otros">Otro</option>
+                    </select>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+        
+        <section class="fieldsetServicios">
+  
+            <h3>Este es un antes y un despues de una pc que le hicimos service:</h3>
+                <img src="../imagenes/antes.jpg" alt="despues">
+                <img src="../imagenes/tp2.jpg" alt="despues">
+        </section>
+  </section>
 
-    <footer class="footer">
-        <div>
-            <ul>
-                <li><img src="../imagenes/descarga.png" alt="logos"></li>
-                <li><img src="../imagenes/images.jpg" alt="logos"></li>
-            </ul>
-        </div>
+  <footer>
+    <div class="footercolumns">
+          <div class="footerimg">
+              <h3>Redes:</h3>
+              <ul>
+                  <li><img src="../imagenes/facebook.svg" alt="logos"></li>
+                  <li><img src="../imagenes/instagram.svg" alt="logos"></li>
+              </ul>
+          </div>
+          <div>
+            <h4>Información de contacto</h4>
+            <p>Teléfono: 387-432-3234</p>
+            <p>Dirección: Chacarita</p>
+            <p>Email: coderbeca@gmail.com</p>
+          </div>
+    </div>
+      <h3>Copyright © 2023 Slt</h3>
+  </footer>
 
-        </div class="contact">
-        <h4>Información de contacto</h4>
-        <p>Teléfono: 387-432-3234</p>
-        <p>Dirección: Chacarita</p>
-        <p>Email: coderbeca@gmail.com</p>
-        </div>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-   
 
 </body>
 </html>

@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../imagenes/fondo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-areas: "header" "main " "main" "footer";
+  grid-template-columns: auto;
+}
+@media screen and (max-width: 768px) {
+  body body {
+    grid-template-areas: "header" "main" "servicios" "footer";
+    grid-template-columns: auto;
+  }
+  body .padre {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+}
+body header {
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: header;
+}
+body header .navbar {
+  padding: 0px;
+  box-shadow: 4px 4px 15px black;
+  background-color: #58677c;
+}
+body header .navbar .container-fluid {
+  background: linear-gradient(to left, violet, blueviolet);
+}
+body header .navbar a {
+  font-weight: 500;
+  color: black;
+  text-shadow: 3px 3px 15px black;
+}
+body header .navbar a:hover {
+  transform: scale(1.1);
+  color: white;
+}
+body header nav {
+  padding: 0px;
+}
+body header img {
+  height: 90px;
+  width: auto;
+  padding: 5px;
+  transition: all 0.3s;
+}
+body header img:hover {
+  transform: scale(1.1);
+}
+body .main {
+  grid-area: main;
+}
+body .main .mainservicios {
+  align-items: center;
+  text-align: center;
+  padding-top: 150px;
+  text-shadow: 2px 2px 15px black;
+  font-family: "Source Code Pro", monospace;
+}
+body .main .mainservicios h1 {
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 600;
+}
+body .main .mainservicios a {
+  background-color: rgb(67, 65, 68);
+  color: white;
+  box-shadow: 2px 2px 15px black;
+  text-decoration: none;
+  font-weight: 600;
+}
+body .main .mainservicios .boton {
+  text-decoration: none;
+  background-color: #B778AB;
+  box-shadow: 5px 5px 15px black;
+  color: black;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 4px 20px;
+  margin: 15px 0;
+  display: inline-block;
+}
+body .main .mainservicios .boton:hover {
+  transform: scale(1.1);
+}
+body .main .mainservicios p {
+  margin: 40px;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 5px 5px 15px black;
+}
+body .main .servicios {
+  grid-area: servicios;
+}
+body .main .servicios .services {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 15px black;
+}
+body .main .servicios .padre {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+body .main .servicios .padre .card h3 {
+  text-shadow: 5px 5px 15px black;
+}
+body .main .servicios .padre .card {
+  background-color: #B778AB;
+  color: white;
+  text-align: center;
+  box-shadow: 1px 1px 15px black;
+  border-radius: 20px;
+  width: 300px;
+  padding-top: 20px;
+  margin: 20px;
+}
+body .main .servicios .padre .buton {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 3px 5px;
+  margin: 10px 0;
+  display: inline-block;
+  border-radius: 20px;
+}
+body .main .servicios .padre .buton:hover {
+  transform: scale(1.1);
+}
+body footer {
+  padding: 20px;
+  background-color: #B778AB;
+  width: 100%;
+  padding-top: 25px;
+  grid-area: footer;
+}
+body footer .footercolumns {
+  display: flex;
+  justify-content: space-between;
+}
+body footer .footercolumns .footerimg img {
+  width: 50px;
+  height: 50px;
+}
+body footer .footercolumns .footerimg ul li {
+  list-style-type: none;
+}
+body footer div {
+  color: black;
+}
+body footer div p {
+  font-weight: 700;
+}
+body footer h3 {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+body .container {
+  color: white;
+  text-shadow: 3px 3px 15px black;
+}
+body .container .texto-quienes {
+  font-family: "Source Code Pro", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+body .container .texto-quienes h4 {
+  padding-bottom: 30px;
+}
+body .container .nosotros h2 {
+  font-weight: 700;
+  padding-left: 40px;
+  text-shadow: 3px 3px 15px black;
+}
+body .container .nosotros p {
+  font-weight: 600;
+  padding-left: 40px;
+  text-shadow: 2px 2px 10px black;
+}
+body .container .nosotros img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 300px;
+}
+body .tps {
+  text-align: center;
+}
+body .tps h2 {
+  text-align: center;
+  margin: 30px;
+  color: white;
+  text-shadow: 3px 3px 15px black;
+}
+body .tps img {
+  width: 500px;
+  height: 450px;
+}
+body .tps img {
+  margin: 20px;
+  transition: all 0.3s;
+}
+body .tps img:hover {
+  transform: scale(1.1);
+}
+body .tps a {
+  text-decoration: none;
+  background-color: #B778AB;
+  box-shadow: 5px 5px 15px black;
+  color: black;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 3px 5px;
+  margin-bottom: 50px;
+}
+body .tps a:hover {
+  transform: scale(1.1);
+}
+body .pr {
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 15px black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 20px;
+}
+body .pr img {
+  margin: 35px;
+  width: 400px;
+  height: 400px;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+body .pr img:hover {
+  transform: scale(1.12);
+}
+body .pr a {
+  text-decoration: none;
+  background-color: #B778AB;
+  box-shadow: 5px 5px 15px black;
+  color: black;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 3px 5px;
+}
+body .pr a:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 950px) {
+  body .pr {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .pr {
+    grid-template-columns: 1fr;
+  }
+}
+body .flex-servicios {
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  margin: 20px;
+  text-shadow: 3px 3px 15px black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body .flex-servicios .dates {
+  margin: 50px;
+}
+body .flex-servicios .nuestro {
+  padding-top: 20px;
+}
+body .imgservi img {
+  width: 500px;
+  margin: 10px;
+}
+body .imgservi img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 810px) {
+  body {
+    grid-template-areas: "header" "main" "servicios" "footer";
+    grid-template-columns: auto;
+  }
+  .padre {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

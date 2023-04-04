@@ -72,6 +72,8 @@ body .main .mainservicios {
 body .main .mainservicios .op {
   color: white;
   font-weight: 600;
+  max-width: 700px;
+  margin: 0 auto;
 }
 body .main .mainservicios a {
   background-color: rgb(67, 65, 68);
@@ -122,22 +124,36 @@ body .main .servicios .padre .card {
   background-color: #B778AB;
   color: white;
   text-align: center;
+  align-items: center;
   box-shadow: 1px 1px 15px black;
   border-radius: 20px;
-  width: 350px;
-  height: 170px;
-  margin: 20px;
+  width: 400px;
+  margin: 10px;
+  padding: 2rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1250px) {
+  body .main .servicios .padre .card {
+    max-widthg: 300px;
+  }
+}
+body .main .servicios .padre .card img {
+  color: white;
 }
 @media screen and (max-width: 768px) {
   body .main .servicios .padre .card {
-    width: 280px;
+    max-width: 280px;
+  }
+  body .main .servicios .padre .card h3 {
+    max-width: 260px;
   }
 }
 body .main .servicios .padre .buton {
   text-decoration: none;
   background-color: black;
   color: white;
-  padding: 3px 5px;
+  padding: 15px 0px;
+  width: 150px;
   margin: 0 auto;
   border-radius: 20px;
   display: inline-block;
@@ -207,6 +223,7 @@ body footer h3 {
 body .container {
   color: white;
   text-shadow: 3px 3px 15px black;
+  padding-left: 0;
 }
 body .container .texto-quienes {
   font-family: "Source Code Pro", monospace;
@@ -249,13 +266,16 @@ body .tps h2 {
   text-shadow: 3px 3px 15px black;
 }
 body .tps .imgtps {
-  padding-top: 10px;
   color: white;
   font-family: "Source Code Pro", monospace;
   text-shadow: 5px 5px 15px black;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+body .tps .imgtps h3 {
+  text-align: center;
 }
 body .tps .imgtps img {
   width: 500px;
@@ -267,18 +287,20 @@ body .tps .imgtps img:hover {
   transform: scale(1.1);
 }
 body .tps .imgtps .textp {
-  padding-right: 20px;
-  padding-top: 20px;
+  padding-right: 100px;
 }
 @media screen and (max-width: 800px) {
   body .tps .imgtps {
     grid-template-columns: 1fr;
   }
+  body .tps .imgtps .textp {
+    padding-right: 0px;
+  }
 }
 @media screen and (max-width: 550px) {
   body .tps .imgtps img {
     width: 280px;
-    height: 250px;
+    height: 230px;
   }
 }
 body .tps a {
@@ -316,10 +338,13 @@ body .pr .card_pr .boton-card_pr {
   background-color: black;
   width: 50px;
   border-radius: 20px;
-  padding-bottom: 5px;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
 }
 body .pr .card_pr .boton-card_pr:hover {
-  transform: scale(1.1);
+  background-color: transparent;
+  border: 2px solid black;
 }
 body .pr .card_pr .boton-card_pr svg {
   color: white;
@@ -359,7 +384,7 @@ body .pr img:hover {
   body .pr .card_pr {
     width: 240px;
     height: 330px;
-    align-items: center;
+    margin: 20px auto;
   }
   body .pr .card_pr h4 {
     font-size: 1rem;
@@ -388,6 +413,9 @@ body .pr img:hover {
   text-shadow: 3px 3px 15px black;
   overflow-x: hidden;
 }
+.body-servicios .h2servicios {
+  text-align: center;
+}
 .body-servicios .dates {
   display: grid;
   grid-template-areas: "datos" "Nservi";
@@ -399,9 +427,14 @@ body .pr img:hover {
     grid-template-columns: 1fr;
   }
 }
+.body-servicios .dates legend {
+  font-weight: 600;
+}
 .body-servicios .dates .datos {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 .body-servicios .dates .datos input {
   width: 300px;
@@ -409,6 +442,8 @@ body .pr img:hover {
 .body-servicios .dates .Nservi {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 .body-servicios .dates .Nservi #servicios {
   width: 200px;
@@ -421,9 +456,12 @@ body .pr img:hover {
   width: 300px;
 }
 .body-servicios .serviimg {
+  text-align: center;
+}
+.body-servicios .serviimg .imgservi {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .body-servicios .serviimg .imgservi img {
   width: 500px;
